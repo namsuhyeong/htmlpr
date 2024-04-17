@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색지정 방법</title>
+    <!-- 구글 폰트 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+   href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+   rel="stylesheet"
+ />
+    <style>
+    html{
+        font-size: 10px;
+    }
+
+    body{
+        font-size: 16px;
+    }
+
+    p#one{
+        color: rgb(100%, 0%, 0%);
+        color: rgb(0%, 50%, 0%);
+        /* rgb(r,g,b) 순 */
+        font-size: 36px;
+        font-weight: 400;
+        /* 100-900 사이 두께 지정 */
+        line-height: 40px;
+        /* 행 높이 */
+        text-align: right;
+        /* 정렬 : left right center justify */
+    }
+
+    p#two{
+        /* color: hsl(300, 100%, 0%); */
+        /* margenta를 100% >> 변화 없음 */
+        color: hsl(300, 50%, 50%);
+        font-size: 3rem;
+        /* html font-size(10px) 의 3배*/
+        text-align: center;
+    }
+
+    p#three {
+        color: rgba(0%, 50%, 0%, 0.5);
+        /* a : 투명도
+        투명도 조절의 다른 방법 opacity
+        opacity: 0.5; (0~1)
+        */
+        font-size: 0.5em;
+        /* body 폰트 사이즈(32px)의 0.5배수 적용 */
+        font-weight: 100;
+        text-align: center;
+      }
+
+      p#four {
+        color: #ff00ff99;
+      }
+      /* 16진수 : 0 1 2 3 4 5 6 7 8 9 A B C D E F
+         00 ~ FF(255)
+      */
+      * {
+        /* font-family: Arial, monospace; */
+        /* Arial 우선 적용, 없으면 monospace */
+        /* 구글폰트 */
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      
+    </style>
+</head>
+<body>
+    <p id="one">고소한 아몬드와 함께 여는 아침</p>
+    <p id="two">고소한 아몬드와 함께 여는 아침</p>
+    <p id="three">고소한 아몬드와 함께 여는 아침</p>
+    <p id="four">고소한 아몬드와 함께 여는 아침</p>
+    <!--각각의 p tag 구분 위해 id 부여-->
+</body>
+</html>

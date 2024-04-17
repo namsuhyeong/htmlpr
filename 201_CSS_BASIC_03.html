@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        /* '%' : 내가 속한 영역을 기준, 백분율 계산
+          >> 내가 속한 영역에 관련 값이 있어야 적용 가능
+          >> body의 height 는 적용되지 않음
+          >> 이유? body의 width 의 기본 값은 화면크기
+          >> height는 기본값이 없음 */
+        .area{
+            width: 200px;
+            width: 50%;
+            height: 100px;
+        }
+
+        .red{
+            border-width: 5px;
+            border-style: solid;
+            /* solid, dashed, dotted, double */
+            border-color: red;
+        }
+
+        .green{
+            /* 단축 속성은 공백으로 속성 값을 서로 구분 */
+            border: 3px solid green;
+
+            /* border-radius: 10px
+            전체 적용 */
+
+            border-radius: 10px 20px 30px 40px;
+            /* 시계방향 */
+        }
+    </style>
+</head>
+<body>
+    <h2><em>"흐린 기억 속의 그대"</em> - 현진영</h2>
+    <p class="red">안개빛 조명은 흐트러진 내 몸을 감싸고</p>
+    <p class="area green">술에 취해 비틀거리는 흐~ 나의 모습 이제는 싫어</p>
+    <p>뚜르르르 예~</p>
+</body>
+</html>
