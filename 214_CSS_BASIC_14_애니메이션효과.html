@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션 효과</title>
+  <style>
+    .eyes{
+      width: 640px; 
+      margin: auto;
+    }
+
+    .eye{
+      width: 200px; 
+      height: 200px; 
+      border: 5px solid black;
+      border-radius: 100px;
+      position : relative;
+      /*ball 때문에 relative 설정*/
+    }
+    /*eye 가 양 옆으로 붙어야 하니깐 float 써야 함*/
+
+    .eye:nth-child(1){
+      float: left;
+    }
+
+    .eye:nth-child(2){
+      float: right;
+    }
+    
+    .ball{
+      width: 50px;
+      height: 50px;
+      background-color: black; 
+      border-radius: 25px;
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      /*
+      *absolute 사용>>위로부터 80px, 왼쪽으로부터 30px*/
+      /*absolute는 상위기준, eye가 relative가 아니면 화면 기준이라 
+      눈알(ball) 형성이 제대로 안 됨 
+      */
+
+
+
+      animation-name: moving;
+      animation-duration: 2s;
+      animation-delay: 0s;
+      animation-timing-function: linear;
+
+      animation-iteration-count: 3;
+       /*infinite 무한 반복  */
+      animation-direction: alternate;
+      /*normal: 정방향
+        reverse: 역방향 
+        alternate : 교대로(정방향-역방향)  
+      */
+
+       /* 단축 속성 */
+    animation: moving 2s 0s linear infinite alternate;
+        }
+
+    .ball:hover{
+      animation-play-state: paused;
+      /*running, pause*/
+    }
+    
+   
+
+    @keyframes moving {
+      from { 
+        left: 30px;
+      }
+
+      to{ 
+        left: 120px;
+
+      }
+    }
+    /*left 30에서 left 120으로 이동하는 프레임 설정*/
+  </style>
+</head>
+<body>
+  <div class="eyes"> 
+    <div class ="eye"> 
+      <div class="ball">
+              </div>
+  </div>
+
+  <div class ="eye"> 
+    <div class="ball">
+            </div>
+</div>
+</body>
+</html>

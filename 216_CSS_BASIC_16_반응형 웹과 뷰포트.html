@@ -1,0 +1,51 @@
+<!--참고로 알아두세요-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹과 뷰포트</title>
+    <style>
+      p {
+        margin: 0;
+        /*font-size: 10vw;*/
+        /*v(view)w(width) 화면의 전체 너비기준, 
+          너비 * (1/10)*/
+        /*font-size: 10vmin;*/
+        /*화면의 너비또는 높이 중 짧은 쪽의 
+        10% 글꼴 크기*/
+        /*font-size: 10vh;*/
+        /*v(view) h(height) 화면의 전체 높이 기준, 
+          너비 * (1/10)*/
+        font-size: 10vmax;
+        /*font-size: 10vmin;*/
+        /*화면의 너비또는 높이 중 긴 쪽의 
+        10% 글꼴 크기*/
+      }
+
+      div.box {
+        width: 150px;
+        height: 150px;
+        background-color: teal;
+        color: white;
+      }
+
+      @media screen and (max-width: 800px) {
+        div.box {
+          background-color: red;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        div.box {
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>발견하는 즐거움 - 닥터윌</p>
+    <div class="box">와우!</div>
+  </body>
+</html>

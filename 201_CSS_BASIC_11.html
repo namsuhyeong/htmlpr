@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 알아보기</title>
+    <style>
+        /*
+      기호와 함께 사용하는 속성 선택자
+      * : 값의 포함 여부
+      ^ : 값의 시작 여부
+      $ : 값의 끝 여부
+      */
+      img[alt]{
+        border:5px dashed red;
+      }
+      img[width]{
+        border: 5px dashed blue;
+      }
+      img[width*='2']{
+        border: 5px dashed green;
+      }
+      /* img[width^='5']{
+        border: 5px dashed pink;
+      }
+      img[width $='0']{
+        border: 5px dashed black;
+      } */
+      body em{
+        color: red;
+      }
+      p>em{
+        color: orange;
+      }
+      /* p > em '>' 활용 자식요소 접근 */
+
+      #three+p{
+        color: darkgray;
+      }
+    </style>
+</head>
+<body>
+    <img src="../img/puppy_01.jpg" width="120" alt="AI DOG">
+    <img src="../img/puppy_01.jpg" width="120">
+    <img src="../img/puppy_01.jpg" width="120" id="three">
+
+
+    <p>닥터윌이 미드저니로 만든 인공지능 개, 닥터 독이예요.</p>
+    <p>닥터 독, 어떤가요?</p>
+    <p>가지고 싶을 정도로 <em>귀엽죠? 깜찍하죠?</em></p>
+    <p>닥터윌도 그렇답니다. ㅋㅋ</p>
+</body>
+</html>
